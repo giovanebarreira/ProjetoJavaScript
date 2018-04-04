@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Bomber Man Arena</title>
+		<style>
+			.renderStack{
+				position: relative;
+			}
+			.rtx{
+				border: 1px solid;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+			}
+			.headPanel{
+				width: 596px;
+				height: 40px;
+				background-color: #788078;
+				padding-left:4px;
+				padding-top: 1px;
+				border: 2px solid;
+			}
+			@font-face {
+			font-family: ArcadeClassicimport;
+			src: url("font/ArcadeClassic.ttf");
+			}
+			p.panelFont{
+				font-family: "ArcadeClassicimport";
+				color: white;
+			}
+			#lives{
+				margin-right: 120px;
+			}
+			#score{
+				margin-left: 10px;
+				color: white;
+			}
+			#time{	
+				color: white;
+				margin-left: 10px;
+				
+			}
+			#space{
+				margin-left: 120px;
+			}
+			p.instructions{
+				font-family: "ArcadeClassicimport";
+				color: black;
+				letter-spacing: 2px;
+			}
+			h2{
+				font-family: "ArcadeClassicimport";
+				color: black;
+				letter-spacing: 2px;
+				font-size: 30px;
+				margin-left: 50px;
+				margin-bottom: 10px;
+			}
+		</style>
+	</head>
+	<script src="BomberMan.js" type="text/javascript" defer>
+	</script>
+	<body onload="startGame()">	
+		<h2> Welcome to Bomberman Arena !</h2>
+		<p class="instructions"> 
+			The rules are, survive and kill as many enemies as you can.
+			If your time ends you Die,
+		<p class="instructions"> 
+			if the fire of the bombs touches you, you Die, and if the enemies touch you... You Die!
+		</p>
+		</p>
+		<p class="instructions"> 
+			The controls are: <img src="font/arrow_keys.png" style="width:60px;height:40px;"></img> &nbsp moves the Bomber Man, and 
+			<img src="font/space_key.png" style="width:60px;height:20px;"></img>&nbsp place the bombs.
+		</p>
+		<div class = "headPanel">
+			<p class="panelFont" > <img src="sprites/bomberman_head.png" style="width:28px;height:20px;"></img> X <span id="lives"></span>
+			Score: <span id="score"> </span> <span id="space"></span>
+			Time: <span id = "time"></span>
+			</p>
+		</div>
+		<div class="renderStack">
+			<canvas class = "rtx" id="drawGame" width = "600px" height="600"></canvas>
+			<canvas class = "rtx" id="drawGame2" width = "600px" height="600"></canvas>
+			<canvas class = "rtx" id="drawGame3" width = "600px" height="600"></canvas>
+			<canvas class = "rtx" id="drawGame4" width = "600px" height="600"></canvas>
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<div>
+			<input type= "button" id="reload" value="Restart" onclick="location.reload()"> </input>
+		</div>
+		
+	</body>
+</html>
+
+
